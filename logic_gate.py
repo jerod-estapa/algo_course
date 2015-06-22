@@ -4,6 +4,7 @@
 
 class LogicGate:
 
+
     def __init__(self, n):
         self.label = n
         self.output = None
