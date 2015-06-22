@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2486cf1-6bd9-45aa-8966-e9b0ffea4772" name="Default" comment="" />
+    <list default="true" id="f2486cf1-6bd9-45aa-8966-e9b0ffea4772" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fraction_class.py" afterPath="$PROJECT_DIR$/fraction_class.py" />
+    </list>
     <ignored path="algo_course.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,8 +28,8 @@
       <file leaf-file-name="fraction_class.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fraction_class.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2922636" vertical-offset="0" max-vertical-offset="698">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.9011461" vertical-offset="0" max-vertical-offset="731">
+              <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -263,8 +265,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="854" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1456" height="854" extended-state="7" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32965517" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -326,8 +328,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fraction_class.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2922636" vertical-offset="0" max-vertical-offset="698">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.9011461" vertical-offset="0" max-vertical-offset="731">
+          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
           <folding />
         </state>
       </provider>

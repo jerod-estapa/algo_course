@@ -32,5 +32,7 @@ class Fraction:
     def __eq__(self, other):
         firstnum = self.num * other.den
         secondnum = other.num * self.den
-
         return firstnum == secondnum
+
+    def __mul__(self, otherfraction):
+        newnum =
