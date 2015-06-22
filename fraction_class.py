@@ -34,5 +34,20 @@ class Fraction:
         secondnum = other.num * self.den
         return firstnum == secondnum
 
+<<<<<<< HEAD
     def __mul__(self, otherfraction):
         newnum =
+=======
+     def __mul__(self, otherfraction):
+         mulnum = self.num * otherfraction.num
+         mulden = self.den * otherfraction.den
+         return Fraction(mulnum, mulden)
+
+     def __div__(self, otherfraction):
+         divnum = self.num * otherfraction.den
+         divden = self.den * otherfraction.num
+         return Fraction(divnum, divden)
+
+     def __sub__(self, otherfraction):
+         subnum =
+>>>>>>> 058f3ff7c061e6876e42133de4fc124878cdc748
