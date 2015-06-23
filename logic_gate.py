@@ -39,7 +39,7 @@ class UnaryGate(self, n):
     def __init__(self):
         LogicGate.__init__(self, n)
 
-        self.pin =  None
+        self.pin = None
 
     def get_pin(self):
         return int(input("Enter Pin input for gate " + self.get_label()+"-->"))
