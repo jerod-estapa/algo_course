@@ -15,3 +15,32 @@ class LogicGate:
     def get_output(self):
         self.output = self.perform_gate_logic()
         return self.output
+
+
+class BinaryGate(LogicGate):
+
+
+    def __init__(self, n):
+        LogicGate.__init__(self, n)
+
+        self.PinA = None
+        self.PinB = None
+
+    def getPinA(self):
+        return int(input("Enter Pin A input for gate " + self.get_label()+"-->"))
+
+    def getPinB(self):
+        return int(input("Enter Pin B input for gate " + self.get_label()+"-->"))
+
+
+class UnaryGate(self, n):
+
+
+    def __init__(self):
+        LogicGate.__init__(self, n)
+
+        self.pin =  None
+
+    def getPin(self):
+        return int(input("Enter Pin input for gate " + self.get_label()+"-->"))
+
