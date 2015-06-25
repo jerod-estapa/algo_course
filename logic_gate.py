@@ -58,3 +58,20 @@ class AndGate(BinaryGate):
             return 1
         else:
             return 0
+
+
+class Connector:
+
+
+    def __init__(self, fgate, tgate):
+        self.fromgate = fgate
+        self.togate = tgate
+
+        tgate.set_next_pin(self)
+
+    def get_from(self):
+        self.fromgate
+
+    def get_to(self):
+        self.togate
+
