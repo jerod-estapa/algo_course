@@ -23,8 +23,8 @@ class BinaryGate(LogicGate):
     def __init__(self, n):
         LogicGate.__init__(self, n)
 
-        self.PinA = None
-        self.PinB = None
+        self.pin_a = None
+        self.pin_b = None
 
     def get_pin_a(self):
         if self.pin_a == None:
