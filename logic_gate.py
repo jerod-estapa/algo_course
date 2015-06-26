@@ -53,6 +53,7 @@ class UnaryGate(LogicGate):
         else:
             return self.pin.get_from().get_output()
 
+
 class AndGate(BinaryGate):
 
 
@@ -90,11 +91,20 @@ class NotGate(UnaryGate):
         UnaryGate.__init__(self, n)
 
     def perform_gate_logic(self):
-        a = self.get_pin()
-        if a == 1:
-            return 1
-        else:
+        if self.get_pin():
             return 0
+        else:
+            return 1
+
+
+class NandGate(AndGate):
+
+
+    def __init__(self, n):
+        AndGate.__init__(self, n)
+
+    def perform_gate_logic(self):
+
 
 
 class Connector:
