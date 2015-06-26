@@ -1,6 +1,6 @@
 #!usr/local/bin/python
 
-#Logic Gates and Circuits
+# Logic Gates and Circuits
 
 class LogicGate:
 
@@ -39,7 +39,7 @@ class BinaryGate(LogicGate):
             return self.pin_b.get_from().get_output()
 
 
-class UnaryGate(self, n):
+class UnaryGate(LogicGate):
 
 
     def __init__(self):
@@ -48,8 +48,10 @@ class UnaryGate(self, n):
         self.pin = None
 
     def get_pin(self):
-        return int(input("Enter Pin input for gate " + self.get_label()+"-->"))
-
+        if self.pin == None:
+            return int(input("Enter Pin input for gate " + self.get_label()+"-->"))
+        else:
+            return self.pin.get_from().get_output()
 
 class AndGate(BinaryGate):
 
@@ -61,6 +63,35 @@ class AndGate(BinaryGate):
         a = self.get_pin_a()
         b = self.get_pin_b()
         if a == 1 and b == 1:
+            return 1
+        else:
+            return 0
+
+
+class OrGate(BinaryGate):
+
+
+    def __init__(self, n):
+        BinaryGate.__init__(self, n)
+
+    def perform_gate_logic(self):
+        a = self.get_pin_a()
+        b = self.get_pin_b()
+        if a == 1 or b == 1:
+            return 1
+        else:
+            return 0
+
+
+class NotGate(UnaryGate):
+
+
+    def __init__(self, n):
+        UnaryGate.__init__(self, n)
+
+    def perform_gate_logic(self):
+        a = self.get_pin()
+        if a == 1:
             return 1
         else:
             return 0
