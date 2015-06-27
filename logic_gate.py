@@ -100,11 +100,21 @@ class NotGate(UnaryGate):
 class NandGate(AndGate):
 
 
-    def __init__(self, n):
-        AndGate.__init__(self, n)
+    def perform_gate_logic(self):
+        if super().perform_gate_logic() == 1:
+            return 0
+        else:
+            return 1
+
+
+class NorGate(OrGate):
+
 
     def perform_gate_logic(self):
-
+        if super().perform_gate_logic () == 1:
+            return 0
+        else:
+            return 1
 
 
 class Connector:
@@ -131,3 +141,11 @@ def set_next_pin(self, source):
             self.pin_b = source
         else:
             raise RuntimeError("Error: NO EMPTY PINS")
+
+
+def main():
+    g1 = AndGate("G1")
+    g2 = NandGate("G2")
+    print(g2.get_output())
+
+main()
