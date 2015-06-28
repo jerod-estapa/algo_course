@@ -7,7 +7,7 @@ def gcd(m, n):
         oldn = n
 
         m = oldn
-        n = oldm%oldn
+        n = oldm % oldn
     return n
 
 
@@ -32,15 +32,15 @@ class Fraction:
 
 # string method
     def __str__(self):
-        return str(self.num)+"/"+str(self.den)
+        return str(self.num) + "/" + str(self.den)
 
 # print method
     def show(self):
         print(self.num, "/", self.den)
 
 # add method (adds two fractions)
-    def __add__(self,otherfraction):
-        newnum = self.num * otherfraction.den + self.den *otherfraction.num
+    def __add__(self, otherfraction):
+        newnum = self.num * otherfraction.den + self.den * otherfraction.num
         newden = self.den * otherfraction.den
         return Fraction(newnum,newden)
 
@@ -48,7 +48,7 @@ class Fraction:
     def __radd__(self, otherfraction):
         return otherfraction.__add__(self)
 
-# sets fractions as equal
+# set fractions as equal
     def __eq__(self, other):
         firstnum = self.num * other.den
         secondnum = other.num * self.den
