@@ -17,8 +17,10 @@ class Fraction:
     def __init__(self, top, bottom):
         self.num = int(top / gcd(abs(top), abs(bottom)))
         self.den = int(bottom / gcd(abs(top), abs(bottom)))
-        if top or bottom != int():
-            print("At least one of your inputs is not a number!")
+        if top != int():
+            print("Your first input is not a number!")
+        elif bottom != int():
+            print("Your second input is not a number!")
 
 # get numerator
     def get_num(self):
@@ -36,11 +38,15 @@ class Fraction:
     def show(self):
         print(self.num, "/", self.den)
 
-# add method (adds fractions)
+# add method (adds two fractions)
     def __add__(self,otherfraction):
         newnum = self.num * otherfraction.den + self.den *otherfraction.num
         newden = self.den * otherfraction.den
         return Fraction(newnum,newden)
+
+# reverse addition (right-sided addition)
+    def __radd__(self, otherfraction):
+        return otherfraction.__add__(self)
 
 # sets fractions as equal
     def __eq__(self, other):
