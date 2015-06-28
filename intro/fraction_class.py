@@ -15,8 +15,10 @@ class Fraction:
 
 
     def __init__(self, top, bottom):
-        self.num = int(top / gcd(abs(top), abs(bottom))
-        self.den = int(bottom / gcd(abs(top), abs(bottom))
+        self.num = int(top / gcd(abs(top), abs(bottom)))
+        self.den = int(bottom / gcd(abs(top), abs(bottom)))
+        if top or bottom != int():
+            print("At least one of your inputs is not a number!")
 
 # get numerator
     def get_num(self):
