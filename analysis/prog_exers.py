@@ -20,6 +20,13 @@ print("-----------------------------------")
 
 # 2. Devise an experiment to verify that get_item and set_item are O(1) for dictionaries
 
+import random
+
+for i in range(10000, 1000001, 20000):
+    t = timeit.Timer("random.randrange(%d) in x" %i, "from __main__ import random, x")
+
+    x = list(range(i))
+
 
 print("-----------------------------------")
 
