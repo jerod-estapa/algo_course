@@ -8,6 +8,9 @@
 import timeit
 import random
 
+print("Exercise 1")
+print("----------")
+
 t = timeit.Timer("l.index(5000)", "from __main__ import l")
 
 print("l.index()")
@@ -20,10 +23,11 @@ for i in range(100000, 10000001, 1000000):
 print("-----------------------------------")
 
 # 2. Devise an experiment to verify that get_item and set_item are O(1) for dictionaries
-
+print("Exercise 2")
+print("----------")
 
 for i in range(10000, 1000001, 20000):
-    t = timeit.Timer("x.get(%d) in x" % i, "from __main__ import x")
+    t = timeit.Timer("x.get(%d)" % i, "from __main__ import random, x")
 
     x = {j: None for j in range(i)}
     get_time = t.timeit(number=1000)
