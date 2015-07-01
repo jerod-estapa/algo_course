@@ -6,6 +6,7 @@
 # 1. Devise an experiment to verify that the list index operator is O(1).
 
 import timeit
+import random
 
 t = timeit.Timer("l.index(5000)", "from __main__ import l")
 
@@ -20,12 +21,13 @@ print("-----------------------------------")
 
 # 2. Devise an experiment to verify that get_item and set_item are O(1) for dictionaries
 
-import random
 
 for i in range(10000, 1000001, 20000):
-    t = timeit.Timer("random.randrange(%d) in x" %i, "from __main__ import random, x")
+    t = timeit.Timer("x.get(%d) in x" % i, "from __main__ import x")
 
-    x = list(range(i))
+    x = {j: None for j in range(i)}
+    get_time = t.timeit(number=1000)
+    print("%d, %10.3f" % (i, get_time))
 
 
 print("-----------------------------------")
