@@ -22,7 +22,7 @@ for i in range(100000, 10000001, 1000000):
 
 print("-----------------------------------")
 
-# 2. Devise an experiment to verify that get_item and set_item are O(1) for dictionaries
+# 2. Devise an experiment to verify that the 'get' method is O(1) for dictionaries
 print("Exercise 2")
 print("----------")
 
