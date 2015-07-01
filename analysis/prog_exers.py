@@ -22,7 +22,8 @@ for i in range(100000, 10000001, 1000000):
 
 print("-----------------------------------")
 
-# 2. Devise an experiment to verify that the 'get' method is O(1) for dictionaries
+# 2. Devise an experiment to verify that the 'get' method is O(1) for dictionaries.
+
 print("Exercise 2")
 print("----------")
 
@@ -43,6 +44,18 @@ print("-----------------------------------")
 
 # 4. Given a list of numbers in random order, write an algorithm that
 #    works in O(nlog(n)) to find the kth smallest number in the list.
+
+def smallest(int_list):
+    if len(int_list) == 1:
+        return int_list[0]
+    else:
+        a = smallest(int_list[1:])
+        b = int_list[0]
+
+        if a <= b:
+            return a
+        else:
+            return b
 
 
 print("-----------------------------------")
