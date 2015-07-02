@@ -45,17 +45,8 @@ print("-----------------------------------")
 # 4. Given a list of numbers in random order, write an algorithm that
 #    works in O(nlog(n)) to find the kth smallest number in the list.
 
-def smallest(int_list):
-    if len(int_list) == 1:
-        return int_list[0]
-    else:
-        a = smallest(int_list[1:])
-        b = int_list[0]
+def select(x, k):
 
-        if a <= b:
-            return a
-        else:
-            return b
 
 
 print("-----------------------------------")
