@@ -8,6 +8,7 @@
 import timeit
 import random
 
+
 print("Exercise 1")
 print("----------")
 
@@ -77,7 +78,7 @@ def select(items, k):
             return pivot
         else:
             items = over
-            n -= len(under) + pcount
+            k -= len(under) + pcount
 
 
 def wrapper(func, *args, **kwargs):
@@ -85,7 +86,10 @@ def wrapper(func, *args, **kwargs):
         return func(*args, **kwargs)
     return wrapped
 
+rand_list = [random.randint(100, 1000) for p in range(1000)]
 
-wrapped = wrapper(select, 100000, 5000)
+wrapped = wrapper(select, rand_list, 500)
 
-print(timeit.timeit(wrapped, number=1000))
+t = timeit.timeit(wrapped, number=1000)
+
+print(t)
