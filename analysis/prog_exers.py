@@ -53,7 +53,7 @@ print("-----------------------------------")
 
 # 5. Can you improve the previous problem to be linear?
 
-print("Exercise 5")
+print("Exercise 5\n")
 
 def select(items, k):
     items = list(items)
@@ -79,3 +79,13 @@ def select(items, k):
             items = over
             n -= len(under) + pcount
 
+
+def wrapper(func, *args, **kwargs):
+    def wrapped():
+        return func(*args, **kwargs)
+    return wrapped
+
+
+wrapped = wrapper(select, 100000, 5000)
+
+print(timeit.timeit(wrapped, number=1000))
