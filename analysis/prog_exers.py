@@ -90,8 +90,8 @@ rand_list = [random.randint(100, 1000) for p in range(1000)]
 
 wrapped = wrapper(select, rand_list, 500)
 
-print('Find the kth smallest integer in a random list')
-print('--------------------')
+print('Timed - find the kth smallest integer in a random list')
+print('------------------------------------------------------')
 
 for i in range(10):
     t = timeit.timeit(wrapped, number=1000)
