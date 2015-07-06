@@ -25,12 +25,20 @@ class Stack:
     def size(self):
         return len(self.items)
 
+# Reverse-string function
 
 def revstring(mystr):
     s = Stack()
-    char = [c for line in s for c in line if c is not " "]
+    for ch in mystr:
+        s.push(ch)
+    revstr = ''
+    while not s.is_empty():
+        revstr += s.pop()
+
+    return revstr
 
 
-
-if __name__ == '__main__':
-    revstring(raw_input('?'))
+print(revstring('Hume'))
+print(revstring('Spinoza'))
+print(revstring('Camus'))
+print(revstring('Russell'))
