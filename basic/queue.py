@@ -8,7 +8,7 @@ class Queue:
 
 
     def __init__(self, items):
-        return self.items = []
+        self.items = []
 
     def is_empty(self):
         return self.items == []
@@ -23,3 +23,9 @@ class Queue:
         return len(self.items)
 
 
+p = Queue()
+
+p.enqueue("Hi")
+p.enqueue("there")
+p.dequeue()
+p.dequeue()
