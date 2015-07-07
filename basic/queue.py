@@ -7,13 +7,13 @@
 class Queue:
 
 
-    def __init__(self, items):
+    def __init__(self):
         self.items = []
 
     def is_empty(self):
         return self.items == []
 
-    def enqueue(self):
+    def enqueue(self, item):
         return self.items.insert(0, item)
 
     def dequeue(self):
@@ -27,5 +27,5 @@ p = Queue()
 
 p.enqueue("Hi")
 p.enqueue("there")
-p.dequeue()
-p.dequeue()
+print(p.dequeue())
+print(p.dequeue())
