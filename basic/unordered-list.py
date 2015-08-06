@@ -26,7 +26,7 @@ class UnorderedList:
         self.head = None
 
     def is_empty(self):
-        return self.head == None
+        return self.head is None
 
     def add(self, item):
         temp = Node(temp)
@@ -36,16 +36,16 @@ class UnorderedList:
     def size(self):
         current = self.head
         count = 0
-        while current != None:
+        while current is not None:
             count += 1
             current = self.get_next()
 
         return count
 
-    def search(self):
+    def search(self, item):
         current = self.head
         found = False
-        while current != None and not found:
+        while current is not None and not found:
             if current.get_data() == item:
                 found = True
             else:
@@ -64,7 +64,7 @@ class UnorderedList:
                 previous = current
                 current = current.get_next()
 
-        if previous == None:
+        if previous is None:
             self.head = current.get_next()
         else:
             previous.set_next(current.get_next())
