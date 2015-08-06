@@ -71,4 +71,10 @@ class UnorderedList:
 
     def append(self, item):
         current = self.head
-        found = False
+        if current:
+            while current.get_next() is not None:
+                current = current.get_next()
+            current.set_next(Node(item))
+        else:
+            self.head = Node(item)
+
